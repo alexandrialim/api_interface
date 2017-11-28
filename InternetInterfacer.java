@@ -72,72 +72,10 @@ public class InternetInterfacer {
 		Element root = doc.getDocumentElement();
 	
 		NodeList a = root.getChildNodes();
-		
 		Node b = a.item(3);
 		System.out.println("Start at: " + a.item(3).getTextContent());
+		System.out.println();
 		System.out.println("Destination is:" + a.item(7).getTextContent());
 	}
 
-		/*	if (doc.hasChildNodes()) {
-
-				printNote(doc.getChildNodes());
-
-			}
-
-		    } catch (Exception e) {
-			System.out.println(e.getMessage());
-		    }
-
-		  }
-		*/
-	/*	  private static void printNote(NodeList nodeList) {
-
-		    for (int count = 0; count < nodeList.getLength(); count++) {
-
-			Node tempNode = nodeList.item(count);
-
-			// make sure it's element node.
-			if (tempNode.getNodeType() == Node.ELEMENT_NODE) {
-
-				// get node name and value
-				System.out.println("\nNode Name =" + tempNode.getNodeName() + " [OPEN]");
-				System.out.println("Node Value =" + tempNode.getTextContent());
-
-				if (tempNode.hasAttributes()) {
-
-					// get attributes names and values
-					NamedNodeMap nodeMap = tempNode.getAttributes();
-
-					for (int i = 0; i < nodeMap.getLength(); i++) {
-
-						Node node = nodeMap.item(i);
-						System.out.println("attr name : " + node.getNodeName());
-						System.out.println("attr value : " + node.getNodeValue());
-
-					}
-
-				}
-
-				if (tempNode.hasChildNodes()) {
-
-					// loop again if has child nodes
-					System.out.print(tempNode.getChildNodes());
-
-				}
-
-				System.out.println("Node Name =" + tempNode.getNodeName() + " [CLOSE]");
-
-			}
-
-		    }
-
-		  }
-*/
-	  /*  doc.getDocumentElement().normalize();
-		System.out.println("Root element: " + doc.getDocumentElement().getNodeName());
-		System.out.println("Start: " + doc.getDocumentElement().isDefaultNamespace(origin));
-		System.out.println("Start: " + doc.getDocumentElement().getElementsByTagName(origin));
-		System.out.println("Start: " + doc.getDocumentElement().getBaseURI());
-		System.out.println(doc);
-		*/
 }
