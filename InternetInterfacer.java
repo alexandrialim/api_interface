@@ -67,17 +67,58 @@ public class InternetInterfacer {
 		 * the end-user.  The document 'doc' contains all of the data from
 		 * the XML parser, and this is the object that you'll want to work
 		 * with.
-		 */
-		
-		Element root = doc.getDocumentElement();
+		 */   
+        
+		doc.getDocumentElement();
+		System.out.println();
+		System.out.println("Directions to Following Route:");
+		System.out.println();
+		System.out.println("Start Address: " + doc.getElementsByTagName("start_address").item(0).getTextContent());
+		System.out.println();
+		System.out.println("End Address: " + doc.getElementsByTagName("end_address").item(0).getTextContent());
+		System.out.println();
+		System.out.println("Travel Mode: " + doc.getElementsByTagName("travel_mode").item(0).getTextContent());
+		System.out.println();
+		System.out.println("Duration: " + doc.getElementsByTagName("text").item(14).getTextContent());
+		System.out.println();
+		System.out.println("Starting Route...");
+		System.out.println();
+		System.out.println("#1: " 
+				+ doc.getElementsByTagName("html_instructions").item(0).getTextContent()
+				+ " for " + doc.getElementsByTagName("text").item(1).getTextContent());
+		System.out.println();
+		System.out.println("#2: " 
+				+ doc.getElementsByTagName("html_instructions").item(1).getTextContent()
+				+ " in " + doc.getElementsByTagName("text").item(3).getTextContent());
+		System.out.println();
+		System.out.println("#3: " 
+				+ doc.getElementsByTagName("html_instructions").item(2).getTextContent()
+				+ " in " + doc.getElementsByTagName("text").item(5).getTextContent());
+		System.out.println();
+		System.out.println("#4: " 
+				+ doc.getElementsByTagName("html_instructions").item(3).getTextContent()
+				+ " in " + doc.getElementsByTagName("text").item(7).getTextContent());
+		System.out.println();
+		System.out.println("#5: " 
+				+ doc.getElementsByTagName("html_instructions").item(4).getTextContent()
+				+ " in " + doc.getElementsByTagName("text").item(9).getTextContent());
+		System.out.println();
+		System.out.println("#6: " 
+				+ doc.getElementsByTagName("html_instructions").item(5).getTextContent()
+				+ " in " + doc.getElementsByTagName("text").item(11).getTextContent());
+		System.out.println();
+		System.out.println("#7: " 
+				+ doc.getElementsByTagName("html_instructions").item(6).getTextContent()
+				+ " in " + doc.getElementsByTagName("text").item(13).getTextContent());
 	
-		NodeList a = root.getChildNodes();
+		/*NodeList a = root.getChildNodes();
 		Node b = a.item(3);
 		System.out.println("Start at: " + a.item(3).getTextContent());
 		System.out.println();
 		System.out.println("Go to this Street: " + a.item(5).getTextContent());
 		System.out.println();
 		System.out.println("Destination is:" + a.item(7).getTextContent());
+		*/
 	}
 
 }
