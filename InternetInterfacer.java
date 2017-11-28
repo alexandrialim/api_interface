@@ -75,6 +75,8 @@ public class InternetInterfacer {
 		Node b = a.item(3);
 		System.out.println("Start at: " + a.item(3).getTextContent());
 		System.out.println();
+		System.out.println("Go to this Street: " + a.item(5).getTextContent());
+		System.out.println();
 		System.out.println("Destination is:" + a.item(7).getTextContent());
 	}
 
